@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\ExampleControllerTests.cs" />
     <Compile Include="FakeEntity.cs" />
     <Compile Include="GenericInteractionContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

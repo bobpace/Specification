@@ -67,6 +67,8 @@
     <Compile Include="Examples\ExampleControllerTests.cs" />
     <Compile Include="FakeEntity.cs" />
     <Compile Include="GenericInteractionContext.cs" />
+    <Compile Include="InMemoryObjectContext.cs" />
+    <Compile Include="InMemoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Specifications\AndTests.cs" />
     <Compile Include="Specifications\GetByKeyTests.cs" />

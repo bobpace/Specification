@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Repository", "src\Testing.Repository\Testing.Repository.csproj", "{42EE963B-9796-4504-95A9-1C881069231E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Repository.Tests", "src\Testing.Repository.Tests\Testing.Repository.Tests.csproj", "{90AECBAC-F657-4055-9BD3-F660E482CF81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42EE963B-9796-4504-95A9-1C881069231E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EE963B-9796-4504-95A9-1C881069231E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EE963B-9796-4504-95A9-1C881069231E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EE963B-9796-4504-95A9-1C881069231E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AECBAC-F657-4055-9BD3-F660E482CF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AECBAC-F657-4055-9BD3-F660E482CF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AECBAC-F657-4055-9BD3-F660E482CF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AECBAC-F657-4055-9BD3-F660E482CF81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

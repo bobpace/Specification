@@ -5,5 +5,6 @@ namespace Testing.Repository.Tests
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
+        public bool IsSpecial { get; set; }
     }
 }

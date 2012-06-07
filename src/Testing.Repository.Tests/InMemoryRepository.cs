@@ -5,9 +5,9 @@ namespace Testing.Repository.Tests
 {
     public class InMemoryRepository : IRepository
     {
-        readonly InMemoryObjectContext _context;
+        readonly IObjectContext _context;
 
-        public InMemoryRepository(InMemoryObjectContext context)
+        public InMemoryRepository(IObjectContext context)
         {
             _context = context;
         }
@@ -57,7 +57,7 @@ namespace Testing.Repository.Tests
             foreach (var item in filteredQuery)
             {
                 deletedCount++;
-                objects.Remove(item);
+                _context.Delete(item);
             }
             return deletedCount;
         }

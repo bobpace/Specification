@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Examples\ExampleControllerTests.cs" />
+    <Compile Include="Examples\InMemoryRepositoryTests.cs" />
     <Compile Include="FakeEntity.cs" />
     <Compile Include="GenericInteractionContext.cs" />
     <Compile Include="InMemoryObjectContext.cs" />

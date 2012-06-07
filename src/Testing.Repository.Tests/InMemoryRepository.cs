@@ -12,43 +12,49 @@ namespace Testing.Repository.Tests
             _context = context;
         }
 
-        public T GetByKey<T>(int key) where T : IEntity, new()
+        public T GetByKey<T>(int key) where T : class, IEntity, new()
         {
             var objects = _context.GetObjects<T>();
             return objects.FirstOrDefault(x => x.Id == key);
         }
 
-        public IEnumerable<T> Query<T>(ISpecification<T> specification) where T : IEntity, new()
+        public IEnumerable<T> Query<T>(ISpecification<T> specification) where T : class, IEntity, new()
         {
             var objects = _context.GetObjects<T>();
             var expression = specification.IsSatisfied();
             return objects.Where(expression.Compile());
         }
 
-        public T Single<T>(ISpecification<T> specification) where T : IEntity, new()
+        public T Single<T>(ISpecification<T> specification) where T : class, IEntity, new()
         {
             var objects = _context.GetObjects<T>();
             var expression = specification.IsSatisfied();
             return objects.Single(expression.Compile());
         }
 
-        public T First<T>(ISpecification<T> specification) where T : IEntity, new()
+        public T First<T>(ISpecification<T> specification) where T : class, IEntity, new()
         {
             var objects = _context.GetObjects<T>();
             var expression = specification.IsSatisfied();
             return objects.First(expression.Compile());
         }
 
-        public void Add<T>(T entity) where T : IEntity, new()
+        public void Add<T>(T entity) where T : class, IEntity, new()
         {
             _context.Add(entity);
         }
 
-        public void Update<T>(T entity) where T : IEntity, new()
+        public void Update<T>(T entity) where T : class, IEntity, new()
         {
+            var item = _context.GetObjects<T>().FirstOrDefault(x => x.Id == entity.Id);
+            if (item != null)
+            {
+                _context.Delete(entity);
+                _context.Add(entity);
+            }
         }
 
-        public int Delete<T>(ISpecification<T> specification) where T : IEntity, new()
+        public int Delete<T>(ISpecification<T> specification) where T : class, IEntity, new()
         {
             var objects = _context.GetObjects<T>();
             var expression = specification.IsSatisfied();
@@ -62,7 +68,7 @@ namespace Testing.Repository.Tests
             return deletedCount;
         }
 
-        public int Count<T>(ISpecification<T> specification) where T : IEntity, new()
+        public int Count<T>(ISpecification<T> specification) where T : class, IEntity, new()
         {
             var objects = _context.GetObjects<T>();
             var expression = specification.IsSatisfied();
